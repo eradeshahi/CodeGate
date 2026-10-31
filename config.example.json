@@ -1,0 +1,100 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 64346,
+    "internal_port": 64347,
+    "transport": "streamable-http",
+    "public_url": "https://mcp.example.com",
+    "public_mcp_url": "https://mcp.example.com/mcp"
+  },
+  "oauth": {
+    "username": "admin",
+    "password_salt": "",
+    "password_hash": "",
+    "client_id": "change-me-to-a-random-string",
+    "access_token_ttl_seconds": 3600,
+    "refresh_token_ttl_seconds": 2592000,
+    "token_store_path": "tokens.json",
+    "allowed_redirect_uris": [
+      "https://your-mcp-client.example.com/oauth/callback"
+    ]
+  },
+  "create_allowed_dirs": true,
+  "transport_security": {
+    "enabled": false
+  },
+  "security": {
+    "block_hidden_files": true
+  },
+  "limits": {
+    "max_read_bytes": 1000000,
+    "max_list_items": 1000
+  },
+  "directories": [
+    {
+      "path": "C:\\projects\\my-app",
+      "permissions": [
+        "full"
+      ]
+    },
+    {
+      "path": "C:\\projects\\docs",
+      "permissions": [
+        "read"
+      ]
+    }
+  ],
+  "commands": {
+    "allowlist": [
+      "php",
+      "php.exe",
+      "composer",
+      "composer.bat",
+      "npm",
+      "npm.cmd",
+      "npx",
+      "npx.cmd",
+      "node",
+      "node.exe",
+      "python",
+      "python.exe",
+      "python3",
+      "pip",
+      "pip.exe",
+      "pytest",
+      "vendor/bin/phpunit",
+      "./vendor/bin/phpunit"
+    ],
+    "timeout_seconds": 120,
+    "max_output_chars": 20000,
+    "blocked_commands": [
+      "rm",
+      "rmdir",
+      "del",
+      "erase",
+      "rd",
+      "remove-item",
+      "unlink",
+      "shred",
+      "trash",
+      "move-item"
+    ],
+    "blocked_patterns": [
+      "rm -rf",
+      "rm -fr",
+      "rmdir /s",
+      "del /f",
+      "del /s",
+      "remove-item",
+      "unlink(",
+      "fs.unlink",
+      "fs.rm",
+      "fs.rmdir",
+      "shutil.rmtree",
+      "pathlib.path.unlink",
+      "os.remove",
+      "os.unlink",
+      "os.rmdir"
+    ]
+  }
+}

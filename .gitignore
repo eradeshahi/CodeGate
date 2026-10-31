@@ -1,0 +1,11 @@
+config.json
+tokens.json
+tokens.tmp
+_config.json
+_secure_files_mcp.py
+backup_before_execute/
+backup_before_security/
+__pycache__/
+*.pyc
+.venv/
+venv/
