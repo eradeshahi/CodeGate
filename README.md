@@ -89,3 +89,7 @@ Heavy folders (`node_modules`, `vendor`, `.git`, `dist`, …) are skipped when s
 ## License
 
 MIT
+
+## Agent skill
+
+[`skill/codegate/SKILL.md`](skill/codegate/SKILL.md) teaches a coding agent when and how to use CodeGate's tools. Copy the `skill/codegate` folder into your agent's skills directory (for Claude Code: `~/.claude/skills/`).
